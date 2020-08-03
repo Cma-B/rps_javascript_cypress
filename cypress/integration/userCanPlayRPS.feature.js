@@ -6,5 +6,8 @@ describe("user can play RPS", () => {
       cy.get("p#score-1").contains("Player: 0")
       cy.get("p#score-2").contains("Computer: 0")
       cy.contains("Make Your Selection")
+      cy.get('i#rock').should('be.visible')
+      cy.get('i#paper').should('be.visible')
+      cy.get('i#scissors').should('be.visible')
     })
 })

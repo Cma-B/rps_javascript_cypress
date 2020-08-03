@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/Cma-B/rps_javascript_cypress.git",
   "author": "Sima <sima.boreiri@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^4.11.0"
+  }
 }

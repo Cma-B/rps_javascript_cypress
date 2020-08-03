@@ -1,0 +1,8 @@
+{
+  "name": "rps_javascripts_cypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Cma-B/rps_javascript_cypress.git",
+  "author": "Sima <sima.boreiri@gmail.com>",
+  "license": "MIT"
+}

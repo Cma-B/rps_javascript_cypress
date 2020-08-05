@@ -75,8 +75,4 @@ describe("user can play RPS", () => {
     cy.get("#player").should("contain", "Player: 0")
     cy.get("#message").should('not.be.visible')
   })
- // it("display updated scoreboard", () => {
-//cy.get("#player").should("contain", `Player: ${scoreboard.player}`)
-//cy.get("#computer").should("contain", `Computer: ${scoreboard.computer}`)
-  //})
 })

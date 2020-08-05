@@ -1,5 +1,3 @@
-
-
 const choices = document.querySelectorAll('.choice');
 const score = document.getElementById('score');
 const result = document.getElementById('result');
@@ -62,10 +60,10 @@ function showWinner(winner, computerChoice) {
     scoreboard.player++;
     // Show message result
     result.innerHTML = `
-      <h1 class="text-win">You Win</h1>
+      <h1 id="text-win" class="text-win">You Win</h1>
       <i class="fa fa-hand-${computerChoice}-o fa-8x"></i>
       <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-        computerChoice.slice(1)}</strong></p>
+      computerChoice.slice(1)}</strong></p>
     `;
   } else if (winner === 'computer') {
     // Inc computer score
@@ -75,20 +73,20 @@ function showWinner(winner, computerChoice) {
       <h1 class="text-lose">You Lose</h1>
       <i class="fa fa-hand-${computerChoice}-o fa-8x"></i>
       <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-        computerChoice.slice(1)}</strong></p>
+      computerChoice.slice(1)}</strong></p>
     `;
   } else {
     result.innerHTML = `
       <h1>It's A Draw</h1>
       <i class="fa fa-hand-${computerChoice}-o fa-8x"></i>
       <p>Computer Chose <strong>${computerChoice.charAt(0).toUpperCase() +
-        computerChoice.slice(1)}</strong></p>
+      computerChoice.slice(1)}</strong></p>
     `;
   }
   // Show score
   score.innerHTML = `
-    <p>Player: ${scoreboard.player}</p>
-    <p>Computer: ${scoreboard.computer}</p>
+    <p id="player">Player: ${scoreboard.player}</p>
+    <p id="computer">Computer: ${scoreboard.computer}</p>
     `;
 
   message.style.display = 'block';
@@ -99,8 +97,8 @@ function restartGame() {
   scoreboard.player = 0;
   scoreboard.computer = 0;
   score.innerHTML = `
-    <p>Player: 0</p>
-    <p>Computer: 0</p>
+    <p id="player">Player: 0</p>
+    <p id="computer">Computer: 0</p>
   `;
   restart.style.display = 'none';
   message.style.display = 'none';
@@ -109,4 +107,3 @@ function restartGame() {
 // Event listeners
 choices.forEach(choice => choice.addEventListener('click', play));
 restart.addEventListener('click', restartGame);
-

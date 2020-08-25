@@ -3,13 +3,13 @@ describe("user can see the result", () => {
     cy.visit("http://localhost:3001", {
     })
   })
-  it("display the game result if user choose Rock", () => {
+
+  it("displays the game result if user choose Rock", () => {
     cy.get("i#rock").click()
     cy.get("#message").then(($message) => {
       if ($message.text().includes("You Win")) {
         cy.get("i#scissors").should("be.visible")
         cy.contains("Computer Chose Scissors")
-
 
       } else if ($message.text().includes("You Lose")) {
         cy.get("i#paper").should("be.visible")
